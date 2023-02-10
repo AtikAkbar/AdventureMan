@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Graphics;
 
 import javax.swing.JPanel;
 import javax.swing.plaf.DimensionUIResource;
@@ -30,9 +31,21 @@ public class GamePanel extends JPanel implements Runnable{  // this class inheri
 
     public void run(){
 
-        while (gameThread != null) {
+        while (gameThread != null) {    
             
-            System.out.println("This loop is running.");
+            // Game loop 
+            // 1. Update : update informatin such as charecter positions
+            update();
+            // 2. Draw : draw the screen with the updated information
+            repaint(); // calles paintComponent() method
         }
+    }
+
+    public void update() {
+        
+    }
+    public void paintComponent(Graphics g) {
+        
+        super.paintComponent(g);
     }
 } 
