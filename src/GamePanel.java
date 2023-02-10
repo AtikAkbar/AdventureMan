@@ -14,10 +14,11 @@ public class GamePanel extends JPanel{  // this class inherits JPanel class -> t
     final int maxScreenRow = 12; // 12 tile vertically     4x3 screen
     final int screenWidth = tileSize * maxScreenCol; //768 pixcel
     final int screenHeight = tileSize * maxScreenRow; //576 pixcel
-}
 
-public GamePanel(){   //constructor of this gamepanel
-    this.setPreferredSize(new DimensionUIResource(screenWidth, screenHeight)); // set the size of this class (JPanel)
-    this.setBackground(Color.BLACK);    // set background color of the screen
-    this.setDoubleBuffered(true);   // enabeling this improves game renderig performence
-}   
+
+    public GamePanel(){   //constructor of this gamepanel
+        this.setPreferredSize(new DimensionUIResource(screenWidth, screenHeight)); // set the size of this class (JPanel)
+        this.setBackground(Color.BLACK);    // set background color of the screen
+        this.setDoubleBuffered(true);   // enabeling this improves game renderig performence
+    }  
+} 
