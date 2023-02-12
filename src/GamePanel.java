@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
 import javax.swing.plaf.DimensionUIResource;
@@ -44,8 +45,15 @@ public class GamePanel extends JPanel implements Runnable{  // this class inheri
     public void update() {
         
     }
-    public void paintComponent(Graphics g) {
-        
-        super.paintComponent(g);
+    public void paintComponent(Graphics g) {    //Graphics is a class that has many function to draw object on screen
+
+        super.paintComponent(g);    // this line is written when printComponent method is used in JPanel. super => is a keyword which regers to the parent class of this GamePanel class -> JPanel.
+
+        Graphics2D g2 = (Graphics2D)g;  // converting Graphics class to Graphics2D for better controle over gameplay and additional function.
+
+        g2.setColor(Color.white);
+        g2.fillRect(100, 100, tileSize, tileSize);
+        g2.dispose();   // program will run without method but it is good practie to save some memory. hover over the method to see more details.
     }
+
 } 
